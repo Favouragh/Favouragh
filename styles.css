@@ -1,0 +1,50 @@
+/* Define a color scheme */
+body {
+    background-color: #f9f9f9; /* set the background of the header to  light gray */
+    color: #333; /* set the text color to dark gray  */
+    font-family: Arial, sans-serif; /* set the Font family  to Arial, and sans-serif */
+}
+/*adding id*/
+#my-header {
+    background-color: #000000; /* set the background of the header to  black  */
+    color: #fff; /* set the tect color to White  */
+    text-align: center; /* set text to align  to the center */
+    padding: 10px; /* Adds 10px padding around the header */}
+
+nav {
+    background-color: #000000; /* set the background color to  black  */
+    text-align: right;        /* set text to align  to the right */
+    padding: 10px; /* adds 20 pixels of padding to prevent links from appearing too crowded */
+}
+nav a{
+    color: #fff; /* White text color for navigation links */
+    text-decoration: none; /* Remove underline from links  learned fro w3school "https://www.w3schools.com/css/css_link.asp"*/
+    margin: 10px; /* Add margin between links */
+}
+
+/* Define classes */
+.featured-section {
+    background-color: #f9f9f9; /* sets the background color for featured section to a light gray  .   */
+
+    text-align: center; /* it centers the text within the section.*/
+}
+
+.featured-heading {
+    font-size: 24px; /* sets the font size to 24px */
+    color: #333;/*  set text color for heading to Dark gray */
+}
+
+.full-width {
+    width: 100%; /* sets the width of the image element to 100%. the element will stretch across the entire width of its container. */
+    height: auto;/* set the height to adjust automatically*/
+}
+footer {
+    background-color: #000000; /* It sets the footer's background color to  black*/
+    color: #fff; /* changes the text color in the footer to  white */
+    padding: 10px; /* It adds 10 pixels of space around the footer. */
+}
+footer a{ 
+    color: #fff; /* It sets the text color for navigation links to White   */
+    text-decoration: none; /* it Removes the  underline from links */
+  
+}
