@@ -48,3 +48,12 @@ footer a{
     text-decoration: none; /* it Removes the  underline from links */
   
 }
+/* Navigation Links */
+nav.right-align a {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
