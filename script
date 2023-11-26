@@ -25,3 +25,44 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+   <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuItems = [
+                { name: 'Jollof Rice', description: 'Delicious rice cooked with tomatoes and spices.', price: '$12.99' },
+                { name: 'Suya', description: 'Grilled spicy meat skewers.', price: '$15.99' },
+                { name: 'Meat Pie', description: 'Savory pastry filled with seasoned meat.', price: '$8.99' }
+            ];
+
+            function createMenuItems() {
+                const menuContainer = document.getElementById('menu');
+                menuItems.forEach(item => {
+                    const menuItem = document.createElement('div');
+                    menuItem.classList.add('menu-item');
+
+                    const itemName = document.createElement('h3');
+                    itemName.textContent = item.name;
+
+                    const itemDescription = document.createElement('p');
+                    itemDescription.textContent = item.description;
+
+                    const itemPrice = document.createElement('p');
+                    itemPrice.textContent = `Price: ${item.price}`;
+
+                    const viewDetailsBtn = document.createElement('button');
+                    viewDetailsBtn.textContent = 'View Details';
+                    viewDetailsBtn.addEventListener('click', function() {
+                        alert(`Details for ${item.name}:\n${item.description}\nPrice: ${item.price}`);
+                    });
+
+                    menuItem.appendChild(itemName);
+                    menuItem.appendChild(itemDescription);
+                    menuItem.appendChild(itemPrice);
+                    menuItem.appendChild(viewDetailsBtn);
+
+                    menuContainer.appendChild(menuItem);
+                });
+            }
+
+            createMenuItems();
+        });
+    </script>
