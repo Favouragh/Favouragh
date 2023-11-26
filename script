@@ -1,0 +1,27 @@
+// script.js
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Navigation Menu Animation
+    const navLinks = document.querySelectorAll('nav.right-align a');
+
+    navLinks.forEach(link => {
+        link.addEventListener('mouseover', function () {
+            this.style.transform = 'scale(1.1)';
+        });
+
+        link.addEventListener('mouseout', function () {
+            this.style.transform = 'scale(1)';
+        });
+    });
+
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+});
