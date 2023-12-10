@@ -1,109 +1,115 @@
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" type="text/css" href="styles.css">
-        <script defer src="script.js"></script>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>The Village Nigerian Website</title>
-        <meta name="description" content="Welcome to The Village Nigerian Restaurant. Explore the flavors of Nigeria with our delicious menu.">
-        <meta name="keywords" content="The Village Nigerian Restaurant, Nigerian cuisine, African food, restaurant menu, reservation, dining, traditional dishes, 
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Village Nigerian Website</title>
+    <meta name="description" content="Welcome to The Village Nigerian Restaurant. Explore the flavors of Nigeria with our delicious menu.">
+    <meta name="keywords" content="The Village Nigerian Restaurant, Nigerian cuisine, African food, restaurant menu, reservation, dining, traditional dishes, 
         jollof rice, suya, fried rice, meat pie, Nigerian flavors, Lagos cuisine, best Nigerian restaurant, African dining experience">
-        <meta name="author" content="Favour_Agho">
-    </head>
- 
-    <body>
-        <header id="my-header">
-            <div id="logo"></div>
-            <h1>The Village</h1>
-        </header>
-    
-    
-    
+    <meta name="author" content="Favour_Agho">
+    <script>
+        function showNotification() { /*Function blocks of reusable code that can be called by name. "https://www.w3schools.com/js/js_functions.asp"*/
+            alert("Reservation successfully made! We look forward to hosting you.");/*learned from w3school."https://www.w3schools.com/jsref/met_win_alert.asp"*/
+        }
+    </script>
+</head>
+
+<body>
+    <header id="my-header">
+        <img src="logo.jpg" alt="The Village Logo" width="80" height="80">
+        <h1>The Village</h1>
+    </header>
+
     <nav class="right-align">
         <a href="index.html">Home</a>
-        <a href="the_village_website(menu).html">menu</a>
-        <a href="the_village_website(reservationpage).html">reservation</a>
-        
-         
+        <a href="the_village_website(menu).html">Menu</a>
+        <a href="the_village_website(reservationpage).html">Reservation</a>
     </nav>
+
     <div>
-    <P> “ Ready to enjoy our delightful Nigerian dishes? We can't wait to host you! Make a reservation below, and we'll ensure a table is ready for you when you arrive.” </P>
+        <p>“Ready to enjoy our delightful Nigerian dishes? We can't wait to host you! Make a reservation below, and we'll ensure a table is ready for you when you arrive.”</p>
     </div>
-   
-    
-     
+
     <div class="reservation-form">
         <h1>Reservation Form</h1>
-        <form action="process_reservation.php" method="POST">
-            <div class="form-group">
-                  <div>
-        <P> Simply fill out your details, including the date, time, and number of guests. We'll confirm your reservation shortly. Get ready for a memorable dining experience with us! ”</P> 
+                <form method="POST" onsubmit="showNotification()">
+                    <div class="form-group">
+                        <p>Simply fill out your details, including the date, time, and number of guests. We'll confirm your reservation shortly. Get ready for a memorable dining experience with us!</p>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="date">Reservation Date:</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="party-size">Party Size:</label>
+                        <select id="party-size" name="party-size" required>
+                            <option value="">Please select an option</option>
+                            <option value="1">1 person</option>
+                            <option value="2">2 people</option>
+                            <option value="3">3 people</option>
+                            <option value="4">4 people</option>
+                            <option value="5">5 people</option>
+                        </select>
+                    </div>
+            
+            <button type="submit">Submit Reservation</button>
+        </form>
     </div>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
-</div>
-<div class="form-group">
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-</div>
-<div class="form-group">
-    <label for="date">Reservation Date:</label>
-    <input type="date" id="date" name="date" required>
-</div>
-<div class="form-group">
-    <label for="party-size">Party Size:</label>
-    <select id="party-size" name="party-size" required>
-        <option value="">Please select an option</option>
-        <option value="1">1 person</option>
-        <option value="2">2 people</option>
-        <option value="3">3 people</option>
-        <option value="4">4 people</option>
-        <option value="5">5 people</option>
-    </select>
-</div>
-<button type="submit">Submit Reservation</button>
-</form>
-</div> 
 
-<div class="cancelation terms">
-<h2 class=" cancelation terms HEADING">canncelation terms</h2>
-<table>
-<tr>
-<th>Time</th>
-<th>Fee</th>
-<th>Cancellation Period</th>
-</tr>
-<tr>
-<td>24 hours before</td>
-<td>$50</td>
-<td>Full refund</td>
-</tr>
-<tr>
-<td>12 hours before</td>
-<td>$25</td>
-<td>50% refund</td>
-</tr>
-<tr>
-<td>Less than 12 hours</td>
-<td>No refund</td>
-<td>N/A</td>
-</tr>
-</table> 
-</div>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KYVPEL3929"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+    <div class="cancelation-terms">
+        <h2 class="cancelation-terms-heading">Cancellation Terms</h2>
+        <table>
+            <tr>
+                <th>Time</th>
+                <th>Fee</th>
+                <th>Cancellation Period</th>
+            </tr>
+            <tr>
+                <td>24 hours before</td>
+                <td>$50</td>
+                <td>Full refund</td>
+            </tr>
+            <tr>
+                <td>12 hours before</td>
+                <td>$25</td>
+                <td>50% refund</td>
+            </tr>
+            <tr>
+                <td>Less than 12 hours</td>
+                <td>No refund</td>
+                <td>N/A</td>
+            </tr>
+        </table>
+    </div>
 
-gtag('config', 'G-KYVPEL3929');
-</script>
-<footer>
-<h2>Contact Us</h2>
-<p>For inquiries or reservations, please call: <a href="tel:+12345678">+1(234)-5678</a></p>
-</footer>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KYVPEL3929"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-KYVPEL3929');
+    </script>
 
+    <footer>
+        <h2>Contact Us</h2>
+        <p>For inquiries or reservations, please call: <a href="tel:+12345678">+1(234)-5678</a></p>
+    </footer>
 </body>
 </html>

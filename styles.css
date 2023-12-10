@@ -3,12 +3,27 @@ body {
     color: #333; /* set the text color to dark gray  */
     font-family: Arial, sans-serif; /* set the Font family  to Arial, and sans-serif */
 }
-/*adding id*/
+
+ 
 #my-header {
-    background-color: #000000; /* set the background of the header to  black  */
-    color: #fff; /* set the tect color to White  */
-    text-align: center; /* set text to align  to the center */
-    padding: 20px; /* Adds 10px padding around the header */}
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#my-header img {
+  margin-right: 10px;
+  margin-left: 10px; /* Add left margin to the logo */
+}
+
+h1 {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 40px;
+}
 
 nav {
     background-color: #000000; /* set the background color to  black  */
@@ -19,6 +34,11 @@ nav a{
     color: #fff; /* White text color for navigation links */
     text-decoration: none; /* Remove underline from links  learned fro w3school "https://www.w3schools.com/css/css_link.asp"*/
     margin: 10px; /* Add margin between links */
+}
+
+p {
+ 
+  padding: 20px; 
 }
 
 /* Define classes */
